@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="username" placeholder="请输入用户名">
+        <input type="password" name="password" placeholder="请输入密码">
+        <input type="submit" value="提交">
+    <script>
+        document.querySelector('form').onsubmit = function(e) {
+            e.preventDefault();
+            var username = document.querySelector('input[name="username"]').value;
+            var password = document.querySelector('input[name="password"]').value;
+            if (username === '123' && password === '123') {
+                alert('登录成功');
+                window.location.href = 'https://www.hao123.com/';
+            } else {
+                alert('用户名或密码错误');
+            }
+        };
+    </script>
+    </form>
+</body>
+</html>
